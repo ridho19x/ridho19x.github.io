@@ -1,0 +1,197 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fefefe;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header / Logo Section */
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e0f2fe;
+    padding: 20px 40px;
+    border-bottom: 2px solid #bae6fd;
+}
+
+.bio h2 {
+    font-size: 28px;
+    color: #0c4a6e;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #0c4a6e;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #0284c7;
+}
+
+/* Banner Section */
+.banner {
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    text-align: center;
+    padding: 60px 20px;
+    animation: fadeIn 1s ease;
+}
+
+.banner img{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #bae6fd;
+    margin-bottom: 20px;
+    
+}
+.banner img:hover{
+    transform: scale(1.2);
+    border-color: green;
+}
+
+.banner h1 {
+    font-size: 36px;
+    color: #0c4a6e;
+}
+
+.banner p {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0 20px;
+}
+
+.banner button {
+    padding: 10px 20px;
+    background-color: #0ea5e9;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.banner button:hover {
+    background-color: #0284c7;
+    transform: scale(1.2);
+}
+
+/* Pendidikan & Softskil Sections */
+.pendidikan, .softskil {
+    padding: 60px 40px;
+    background-color: #f8fafc;
+    text-align: center;
+}
+
+.pendidikan h3, .softskil h3 {
+    font-size: 28px;
+    color: #0f172a;
+    margin-bottom: 40px;
+}
+
+.pendidikan .kiri, .pendidikan .tengah, .pendidikan .kanan,
+.softskil .kiri, .softskil .tengah, .softskil .kanan {
+    display: inline-block;
+    width: 28%;
+    margin: 1%;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.pendidikan img, .softskil img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.pendidikan p, .softskil p {
+    font-size: 16px;
+    color: #334155;
+}
+
+.pendidikan .kiri:hover,
+.pendidikan .tengah:hover,
+.pendidikan .kanan:hover,
+.softskil .kiri:hover,
+.softskil .tengah:hover,
+.softskil .kanan:hover {
+    transform: translateY(-5px);
+}
+
+/* Kontak Sosmed */
+.sosmed {
+    background: #e0f2fe;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.sosmed ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.sosmed ul li a img {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.3s;
+    
+    
+}
+
+.sosmed ul li a img:hover {
+    transform: scale(1.2);
+}
+
+.sosmed h4{
+    font-size: 8px;
+  
+    
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .logo {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pendidikan .kiri, .pendidikan .tengah, .pendidikan .kanan,
+    .softskil .kiri, .softskil .tengah, .softskil .kanan {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
